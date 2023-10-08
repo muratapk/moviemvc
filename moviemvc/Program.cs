@@ -1,3 +1,8 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using moviemvc.Data;
+using moviemvc.Models.Domain;
+
 namespace moviemvc
 {
     public class Program
@@ -9,6 +14,13 @@ namespace moviemvc
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            //database baðlanmak için kullanýlan cümle database baðlanmasý servis ekliyoruz
+
+            builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            //identity özelliði burada Ekliyorsunuz
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<DatabaseContext>();
+            
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -24,6 +36,8 @@ namespace moviemvc
 
             app.UseRouting();
 
+            app.UseAuthentication();
+            
             app.UseAuthorization();
 
             app.MapControllerRoute(
