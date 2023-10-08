@@ -1,0 +1,48 @@
+﻿@model List<moviemvc.Models.Domain.Slider>
+<div class="zmovo-tvseries-item arow-icon">
+    <div class="container">
+        <div class="zmovo-tvseries-items">
+            <div class="zmovo-hadidng pt-50 pb-30">
+                <h2><span class="text-uppercase">tv series</span></h2>
+            </div>
+            <!-- items -->
+            <div class="items" id="tvseries-shows">
+                <!-- ITEM -->
+                @foreach(var item in Model)
+                {
+                <div class="item">
+                    <div class="zmovo-video-item-box">
+                        <div class="zmovo-video-box-inner">
+                            <div class="zmovo-v-box-img gradient">
+                                <img src="~/Slider/@item.SliderImage" alt="">
+                                <div class="ply-btns">
+                                    <a href="" data-video-url="https://www.youtube.com/watch?v=CsVJoCKc9rA" class="ply-btn video-popup"><img src="~/Home/image/play-button.png" alt=""></a>
+                                </div>
+                                <div class="zmovo-v-box-content">
+                                    <a href="">@item.Heading1</a>
+                                    <div class="zmovo-v-tag c2">
+                                        <span>@item.Heading2</span>
+                                    </div>
+                                    <div class="movie-time"><i class="fa fa-clock-o c1"></i><span>2 Hr 3 Min</span></div>
+                                    <div class="like-icon">
+                                        <a href=""><span class="fa fa-heart-o"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+                <!-- END ITEM -->
+             
+               
+            </div>
+            <!-- end items -->
+            <!-- ALL VIEW -->
+            <div class="button pt-50 text-center">
+                <a href="" class="btn btn-radus">view all <span class="fa fa-angle-right"></span></a>
+            </div>
+            <!-- END ALL VIEW -->
+        </div>
+    </div>
+</div>

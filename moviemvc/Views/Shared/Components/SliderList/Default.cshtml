@@ -1,0 +1,34 @@
+﻿@model List<moviemvc.Models.Domain.Slider>
+
+<div class="zmovo-slider-area">
+    <div class="items" id="slider">
+        @foreach(var item in Model)
+        {
+        <div class="item">
+            <div class="zmovo-slider-contents">
+                <img src="~/Slider/@item.SliderImage" alt="">
+                <div class="zmovo-slide-content">
+                    <div class="container">
+                        <div class="zmovo-slider-contetn">
+                            <div class="zmovo-slider-premium-tag">
+                                <span class="c2-bg">premium</span>
+                                <label>@item.Heading1</label>
+                            </div>
+                            <a href="">@item.Heading2</a>
+                            <div class="zmovo-slide-cat">
+                                <ul>
+                                    <li><span>Category : </span>English Movies - 2019</li>
+                                    <li><span>Genre : </span>Action, Drama </li>
+                                </ul>
+                            </div>
+                            <div class="zmovo-slide-ply-btn">
+                                <a href="" data-video-url="https://www.youtube.com/watch?v=CsVJoCKc9rA" class="video-popup"><img src="~/Home/image/play-button.png" alt="">Play Trailer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

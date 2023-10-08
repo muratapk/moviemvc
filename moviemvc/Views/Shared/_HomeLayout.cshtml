@@ -176,7 +176,11 @@
             </div>
         </header>
         <!-- SLIDER SECTION --->
+        @await Component.InvokeAsync("SliderList")
         @RenderBody()
+
+
+        @await Component.InvokeAsync("TvseriesList")
         <!-- FOOTER -->
   <partial name="_footerPartial"/>
 </body>
