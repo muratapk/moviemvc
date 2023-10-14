@@ -17,10 +17,6 @@ namespace moviemvc.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult Index()
-        {
-            return View();
-        }
+        
     }
 }

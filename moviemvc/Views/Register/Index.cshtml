@@ -1,0 +1,74 @@
+﻿@model moviemvc.Dto.AppUserRegisterDto 
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<div class="zmovo-breadcroumb-area">
+    <div class="zmovo-breadcroumb-bg">
+        <div class="container">
+            <div class="zmovo-breadcroumb-inner text-center">
+                <h2>Register</h2>
+                <span>Register</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End breadcroumb-area -->
+<div class="zmovo-inner-page">
+    <div class="zmovo-login-page">
+        <div class="container">
+            <div class="row">
+                <div class="offset-lg-4 col-lg-4">
+                    <div class="zmovo-page-login mt-50">
+                        <form action="Index" method="post">
+                            <div class="zmovo-login-input-top">
+                                <div class="form-group">
+                                    <input class="form-control" required="" asp-for="FirstName" type="text" placeholder="Adınızı Girin">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" required="" asp-for="LastName" type="text" placeholder="Soyadınız Girin">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" required="" asp-for="Birthday" type="text" placeholder="Doğum Tarihinizi Girin">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" required="" type="text" asp-for="UserName" placeholder="Kullanıcı Adınız Girin">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" required="" type="password" asp-for="Password" placeholder="Şifrenizi Girin">
+                                </div>
+
+                                <div class="form-group">
+                                    <input class="form-control" required="" type="password" asp-for="ConfirmPassword" placeholder="Şifrenizi Tekrar Girin">
+                                </div>
+                            </div>
+                            <div class="zmovo-login-fb">
+                                <span>or</span>
+                                <ul>
+                                    <li class="log-fb"><a href=""><span class="fa fa-facebook"></span>Facebook</a></li>
+                                    <li class="log-goo"><a href=""><span class="fa fa-google"></span>Google</a></li>
+                                </ul>
+                            </div>
+                            <div class="zmovo-login-btns">
+                                
+                                <input type="submit"  class="zmovo-login-btn" value="Login"/>
+                            </div>
+                            <div class="zmovo-forgate">
+                                <div class="zmovo-remember-me">
+                                    <input type="checkbox" id="remember" class="checkbox">
+                                    <label for="remember">Remember Me</label>
+                                </div>
+                                <div class="zmovo-forgate-me">
+                                    <a href="">Forgat you <span>Password ?</span></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

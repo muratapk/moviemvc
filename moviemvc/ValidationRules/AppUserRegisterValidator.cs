@@ -12,6 +12,7 @@ namespace moviemvc.ValidationRules
            RuleFor(x => x.Birthday).NotEmpty().WithMessage("Buraya Boş Bırakmazsınız");
            RuleFor(x => x.UserName).NotEmpty().WithMessage("Buraya Boş Bırakmazsınız");
            RuleFor(x => x.Email).NotEmpty().WithMessage("Buraya Boş Bırakmazsınız");
+           RuleFor(x => x.Email).EmailAddress().WithMessage("Geçerli Bir Email Adresi Giriniz");
            RuleFor(x => x.ConfirmCode).NotEmpty().WithMessage("Buraya Boş Bırakmazsınız");
            RuleFor(x => x.Password).NotEmpty().WithMessage("Buraya Boş Bırakmazsınız");
            RuleFor(x => x.ConfirmPassword).NotEmpty().WithMessage("Buraya Boş Bırakmazsınız");
