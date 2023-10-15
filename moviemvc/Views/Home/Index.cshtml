@@ -4,5 +4,6 @@
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
 
-<h1>Index</h1>
-
+@await Component.InvokeAsync("SliderList")
+@await Component.InvokeAsync("MovieList")
+@await Component.InvokeAsync("TvseriesList")

@@ -127,8 +127,7 @@
                                                     <li class="has-sub">
                                                         <span class="submenu-button"></span><a href="#">Login</a>
                                                         <ul>
-                                                            <li><a href="login.html">Login</a></li>
-                                                            <li><a href="ragister.html">Register</a></li>
+                                                         <partial name="_loginPartial" />
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -168,7 +167,7 @@
                                 </div>
                             </div>
                             <div class="zmovo-login">
-                                <a href="login.html" class="btn login-btn"><span class="fa fa-user"></span> Login</a>
+                               <partial name="_loginPartial"/>
                             </div>
                         </div>
                     </div>
@@ -176,12 +175,11 @@
             </div>
         </header>
         <!-- SLIDER SECTION --->
-        @await Component.InvokeAsync("SliderList")
-        @await Component.InvokeAsync("MovieList")
+       
         @RenderBody()
 
 
-        @await Component.InvokeAsync("TvseriesList")
+      
         <!-- FOOTER -->
   <partial name="_footerPartial"/>
 </body>

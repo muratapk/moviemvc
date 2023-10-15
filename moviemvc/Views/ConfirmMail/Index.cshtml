@@ -1,0 +1,25 @@
+﻿@model moviemvc.Models.Domain.ConfirmMailViewModel 
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+
+<h1>Mail Onay Formu</h1>
+<form>
+<div class="form-group">
+    <h2>Onay Mailli Gönderilen Mail Adresi @ViewBag.Email</h2>
+</div>
+<div class="form-group">
+    <Label>Mail Adresiniz</Label>
+    <input type="text" asp-for="Email" value="@ViewBag.Email" class="form-control" readonly />
+</div>
+<div class="form-group">
+    <Label>6 Haneli Onay Kodunu Giriniz:@ViewBag.Code</Label>
+    <input type="text" asp-for="ConfirmCode" class="form-control" />
+</div>
+<div class="form-group">
+<input type="submit" value="Kayıt Ol" class="btn btn-success"/>
+</div>
+
+</form>
