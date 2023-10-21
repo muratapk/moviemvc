@@ -28,7 +28,7 @@ namespace moviemvc.Controllers
             Random kodum = new Random();
             int code = 0;
             code = kodum.Next(100000, 1000000);
-
+            ViewBag.Code = code;
             ApplicationUser appuser = new ApplicationUser()
             {
                 FirstName = appUserRegisterDto.FirstName,
@@ -40,7 +40,7 @@ namespace moviemvc.Controllers
             
             
             };
-
+        
             //appuser.Email= appUserRegisterDto.Email;
             var result =await _userManager.CreateAsync(appuser, appUserRegisterDto.Password);
             if (result.Succeeded)
@@ -61,7 +61,7 @@ namespace moviemvc.Controllers
                 client.Disconnect(true);
 
                 TempData["Mail"] = appUserRegisterDto.Email;
-                ViewBag.Code = code;
+               
                 return RedirectToAction("Index","ConfirmMail");
             }
             else
